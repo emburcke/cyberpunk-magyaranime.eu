@@ -4,7 +4,7 @@
 
 @font-face {
     font-family: Cyberpunk;
-    src: url(https://raw.githubuser%63ontent.com/emburcke/cyberpunk-css/main/fonts/Cyberpunk.otf) format('opentype');
+    src: url("https://raw.githubusercontent.com/emburcke/cyberpunk-magyaranime.eu/main/fonts/Cyberpunk.otf") format('opentype');
 } /*con ent tiltasra kerult miatt a c hejett %63 at hasznalunk, igy be tudjuk tolteni a tavoli fontot.*/
 
 :root {
