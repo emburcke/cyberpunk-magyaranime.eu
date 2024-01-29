@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css?family=Oxanium:wght@300&display=swap");
+
+@font-face {
+    font-family: Cyberpunk;
+    src: url(https://raw.githubuser%63ontent.com/emburcke/cyberpunk-css/main/fonts/Cyberpunk.otf) format('opentype');
+} /*con ent tiltasra kerult miatt a c hejett %63 at hasznalunk, igy be tudjuk tolteni a tavoli fontot.*/
+
+:root {
+    --black: #000000;
+    --grey: #333333;
+    --yellow: #f8ef02;
+    --cyan: #00ffd2;
+    --purple: #800080;
+    --logo-color-0: #feef00;
+    --logo-color-1: #46dffb;
+    --logo-color-2: #45aefb;
+    --szegely: 7px;
+    --szegely-sarokmeret: 15px;
+    --szegely-kep-sarokmeret: 11px;
+    --bg-image: url("https://pixelz.cc/wp-%63ontent/uploads/2023/09/cyberpunk-2077-samurai-uhd-4k-wallpaper.jpg");
+    --bg-letol: 140px;
+}
+@keyframes kep-hover
+{
+    0% {transform: translate(0,0) skew(0deg); filter: invert(0);filter: blur(0) brightness(100%) contrast(100%);}
+    1% {transform: translate(0,0) skew(-3deg); filter: invert(0);}
+    2% {transform: translate(0,0) skew(3deg); filter: invert(0);filter: blur(.05rem) brightness(120%) contrast(120%);}
+    3% {transform: translate(0,0) skew(0deg); filter: invert(0);}
+    4% {filter: blur(.10rem) brightness(150%) contrast(150%);}
+    6% {filter: blur(.20rem) brightness(170%) contrast(170%);}
+    8% {filter: blur(0) brightness(100%) contrast(100%);}
+    10% {filter: blur(0) brightness(100%) contrast(100%);}
+    60% {transform: translate(0,0) skew(0deg); filter: invert(0);filter: blur(0) brightness(100%) contrast(100%);}
+    61% {transform: translate(0,0) skew(-3deg); filter: invert(0.2);}
+    62% {transform: translate(0,0) skew(0deg); filter: invert(0.2);filter: blur(.05rem) brightness(60%) contrast(100%);}
+    63% {transform: translate(0,0) skew(3deg); filter: invert(0.8);}
+    64% {transform: translate(0,0) skew(0deg); filter: invert(0.2);filter: blur(.10rem) brightness(40%) contrast(100%);}
+    65% {transform: translate(0,0) skew(0deg); filter: invert(0);}
+    66% {filter: blur(0) brightness(100%) contrast(100%);}
+    68% {filter: blur(.05rem) brightness(60%) contrast(100%);}
+    70% {filter: blur(.10rem) brightness(40%) contrast(100%);}
+    72% {filter: blur(0) brightness(100%) contrast(100%);}
+    100% {filter: blur(0) brightness(100%) contrast(100%);}
+}
+
+.logo_first, .logo_second {
+    font-weight: 0.7em;
+    font-family: Cyberpunk;
+    font-size: 2.7em;
+    letter-spacing: -.27em;
+    color: var(--logo-color-0);
+    text-shadow: 2px 2px 0px var(--cyan);
+    text-shadow: var(--logo-color-1) 1px 1px, var(--logo-color-2) 2px 2px;
+}
+.logo_second {
+   -.4em;
+}
+
+.gen-bottom-header {
+    background-color: var(--black);
+    /*TODO razor */
+}
+header#gen-header.gen-header-style-1.gen-has-sticky {
+    background: transparent;
+    backdrop-filter: none;
+    position: sticky;
+}
+.gen-breadcrumb { /*TODO szoveg megcsinalasa;ne legyenek random kepek az oldal tetejen (ha rendes ember lennek, megcsinalnam hogy nezzen ki jol,de nem vagyok az ezert csak eltuntetem)*/
+    background-image: none !important; /*ne toltse le a képet*/
+    background-color: rgba(0,0,0,0);
+    display: none; /*ne is jelenjen meg*/
+}
+/*.gen-breadcrumb:before {
+    background-color: rgba(0,0,0,0);
+}*/
+.pt-0.pb-0 { /*ne legyen oldal tetelyen anime ajanlo (nem tudom jora megcsinalni)*/
+    display: none;
+}
+.home-singal-silder { /*TODO ne eltuntetni, megcsinálni (erre még van esély)*/
+   display: none;
+}
+body {
+    background-color: var(--grey); /*ha a kép nem töltődik be*/
+    background-image: var(--bg-image);
+    background-position: 50% calc(50% + var(--bg-letol));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    box-shadow: inset 0 0 0 100vmax rgb(0, 0, 0, .7);
+}
+body section:first-of-type:not([class]) { /*padding eltüntetése, mert a navbar az sticky, nem fixed*/
+   display: none;
+}
+.gen-blog-post {
+    background-color: var(--yellow);
+    --sarokmeret: 30px;
+    clip-path: polygon(0 0, 0 calc(100% - var(--sarokmeret)), var(--sarokmeret) 100%, 100% 100%, 100% var(--sarokmeret), calc(100% - var(--sarokmeret)) 0);
+}
+.gen-blog-contain {
+    color: var(--black);
+}
+.gen-blog-contain span {
+    color: var(--black) !important; /* A változtatás sikeresen ... */
+}
+.gen-blog-contain textarea { /* ez a szerkesztö */
+    font-family: monospace;
+    background-color: var(--grey);
+    color: var(--cyan);
+    border: none;
+}
+.gen-blog-contain h2 { /*egyedi css kodjaim*/
+    color:red;
+}
+/*az anime kepek itemekrol tuntessuk el az alap animaciot, adjunk hejette sajatot*/
+.gen-carousel-movies-style-2 .gen-movie-contain .gen-movie-img {
+    filter: blur(0) brightness(100%) contrast(100%);
+    transform: translate(0,0) skew(0deg); filter: invert(0);
+    animation: none;
+}
+.gen-carousel-movies-style-2 .gen-movie-contain .gen-movie-img::before {
+  transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
+  -webkit-transition: none;
+}
+.gen-carousel-movies-style-2 .gen-movie-contain:hover .gen-movie-img::before {
+    opacity: 0;
+}
+.gen-carousel-movies-style-2 .gen-movie-contain:hover .gen-movie-img img {
+    -webkit-transform: none;
+    transform: none;
+    animation: kep-hover 5s linear infinite;
+}
+/*animaci eltuntetes vege, itemek kezdete*/
+.gen-carousel-movies-style-2 .gen-movie-contain {
+    padding-left: var(--szegely);
+    padding-right: var(--szegely);
+    background-color: var(--yellow);
+    clip-path: polygon(0 0, 0 calc(100% - var(--szegely-sarokmeret)), var(--szegely-sarokmeret) 100%, 100% 100%, 100% var(--szegely-sarokmeret), calc(100% - var(--szegely-sarokmeret)) 0);
+}
+.gen-movie-img img{
+    margin-top: var(--szegely);
+    clip-path: polygon(0 0, 0 100%, 100% 100%, 100% var(--szegely-kep-sarokmeret), calc(100% - var(--szegely-kep-sarokmeret)) 0);
+}
+.gen-info-contain { /*TODO kezdj valamit a belogo resz jelzesevel*/
+    margin: var(--szegely);
+    margin-top: 0px;
+}
+.gen-movie-meta-holder a{
+    display: none;
+}
+.gen-movie-meta-holder a:last-child{
+    display: inline-block;
+}
+.gen-carousel-movies-style-2 .gen-movie-contain .gen-movie-info h3 a {
+   color: var(--black);
+}
+
+.gen-footer-top .container .row .col-xl-3{
+    max-width: initial;
+    flex: initial;
+    padding: 0px;
+}
+
+.gen-footer-top .container .row .col-xl-3:last-child a{ /*a fansub logok*/
+    display: block;
+    text-align: center;
+    float: left;
+    display:red;
+}
+
+#gen-footer .gen-footer-style-1 .gen-footer-logo{ /*a fansub logok kepe*/
+    margin: 0px;
+    width: calc(100% - 5px);
+}
+#gen-footer .gen-footer-style-1 .widget:first-child{
+    margin: 0px;
+}
+.gen-footer-top .row {
+    display: block;
+}
+
+.menu-about-container {
+    display:none; /*eltuneti a kiemelt csapatok lista szerinti felsorolását, hiszen úgyis ott vannak a képek (logok)*/
+}
