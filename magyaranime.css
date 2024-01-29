@@ -2,6 +2,22 @@
 
 @import url("https://fonts.googleapis.com/css?family=Oxanium:wght@300&display=swap");
 
+@font-face 
+{
+    font-family: BlenderProBook;
+    font-style: normal;
+    font-weight: 400;
+    src: url("https://raw.githubusercontent.com/emburcke/cyberpunk-magyaranime.eu/main/fonts/BlenderProBook.woff2") format("woff2");
+}
+
+@font-face 
+{
+    font-family: Oxanium;
+    font-style: normal;
+    font-weight: 400;
+    src: url("https://raw.githubusercontent.com/emburcke/cyberpunk-magyaranime.eu/main/fonts/Oxanium.woff2") format('woff2');
+}
+
 @font-face {
     font-family: Cyberpunk;
     src: url("https://raw.githubusercontent.com/emburcke/cyberpunk-magyaranime.eu/main/fonts/Cyberpunk.otf") format('opentype');
@@ -89,6 +105,7 @@ body {
     background-size: cover;
     background-attachment: fixed;
     box-shadow: inset 0 0 0 100vmax rgb(0, 0, 0, .7);
+    font-family: BlenderProBook;
 }
 body section:first-of-type:not([class]) { /*padding eltüntetése, mert a navbar az sticky, nem fixed*/
    display: none;
@@ -105,7 +122,7 @@ body section:first-of-type:not([class]) { /*padding eltüntetése, mert a navbar
     color: var(--black) !important; /* A változtatás sikeresen ... */
 }
 .gen-blog-contain textarea { /* ez a szerkesztö */
-    font-family: monospace;
+    font-family: Oxanium, monospace;
     background-color: var(--grey);
     color: var(--cyan);
     border: none;
