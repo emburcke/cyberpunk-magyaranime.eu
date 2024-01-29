@@ -2,10 +2,12 @@
 If this framework is missing anything you would like to have, please, let me know. Open up an issue or create a pull request.
 
 # cyberpunk-css
-A pure CSS library providing Cyberpunk 2077 themed elements for your webpage.
-applied to magyaranime.eu
+alddesign created a great library :
+  A pure CSS library providing Cyberpunk 2077 themed elements for your webpage.
+i applied to magyaranime.eu, an changed the license to GPLv3
 
-Demo & getting started: https://alddesign.github.io/cyberpunk-css/demo/  
+# original css demo:
+getting started: https://alddesign.github.io/cyberpunk-css/demo/  
 
 ## Screenshots of the demo page:
 
